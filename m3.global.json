@@ -1,0 +1,4 @@
+{
+  "dependencies": ["https://github.com/DinheroDevelopmentGroup/mmp.chat.git"],
+  "name": "dinhero21.reconnect"
+}
