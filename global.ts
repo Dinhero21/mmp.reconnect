@@ -39,9 +39,26 @@ export default async function (instance: Instance): Promise<void> {
   async function reconnectImmediate(): Promise<void> {
     reconnected = true;
 
+    instance.client.write('system_chat', {
+      content: JSON.stringify({
+        color: 'green',
+        text: `reconnecting...`,
+      }),
+      isActionBar: true,
+    });
+
     instance.server.end();
     await instance.worker.terminate();
     if (instance.client.ended) return;
+
+    instance.client.write('system_chat', {
+      content: JSON.stringify({
+        color: 'green',
+        text: `Connecting to server...`,
+      }),
+      isActionBar: true,
+    });
+
     server.emit('login', instance.client);
   }
 
