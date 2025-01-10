@@ -1,4 +1,8 @@
 {
-  "dependencies": ["https://github.com/DinheroDevelopmentGroup/mmp.chat.git"],
+  "dependencies": [
+    "https://github.com/DinheroDevelopmentGroup/mmp.chat.git",
+    "https://github.com/DinheroDevelopmentGroup/mmp.pose.git",
+    "https://github.com/DinheroDevelopmentGroup/mmp.sound.git"
+  ],
   "name": "dinhero21.reconnect"
 }
